@@ -98,7 +98,7 @@ examples/
   README.md               产物字段与 trace 格式说明
   run_all.ps1 / run_all.sh 一键重放
 data/                     素材、工单、排期、规则、黑名单（合成数据）
-docs/                     01 需求 / 02 方案 / 03 评估 / 04 AI 使用 / 05 复盘
+docs/                     01 需求 / 02 方案 / 03 评估 / 04 AI 使用 / 05 复盘 / 06 提交说明
 requirements.txt          说明「运行时零依赖」
 requirements-dev.txt      可选：想用 pytest 时安装
 .env.example              需要哪些变量（不填也能离线跑）
