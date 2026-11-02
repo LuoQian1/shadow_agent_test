@@ -9,8 +9,8 @@
 | 项 | 值 |
 | --- | --- |
 | 题号 | 题三 · 素材审核与发布排期 Agent |
-| GitHub | `https://github.com/<TODO-填你的账号>/<TODO-仓库名>` |
-| 最终 commit | `<TODO-填 commit SHA>` |
+| GitHub | `https://github.com/LuoQian1/shadow_agent_test` |
+| 最终 commit | 见仓库最新提交（`git rev-parse HEAD`）；核心代码与产物的那次提交为 `448a6d7` |
 | 评审可见性 | 计划公开仓库；若为私有，请把评审账号加为 Read |
 | 运行方式 | **CLI**（题目允许 CLI / HTTP API / Notebook 三选一） |
 | 技术栈 | Python 3.8+，运行时**零第三方依赖**（仅标准库），测试用标准库 `unittest` |
