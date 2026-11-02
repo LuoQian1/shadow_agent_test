@@ -1,0 +1,112 @@
+{
+  "run_id": "RUN-E04_rule_risk-01",
+  "case_id": "E04_rule_risk",
+  "status": "completed",
+  "limit_reason": null,
+  "model": {
+    "primary": "offline-policy",
+    "final": "offline-policy",
+    "kind": "offline",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 4,
+    "max_steps": 12,
+    "tool_calls_used": 3,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M04",
+      "title": "全网第一的夏日防晒实测",
+      "review_status": "blocked",
+      "decision": "review_blocked",
+      "risk_reasons": [
+        {
+          "rule_id": "R03",
+          "name": "肖像授权",
+          "category": "review",
+          "severity": "block",
+          "kind": "risk",
+          "message": "素材含人物出镜且肖像授权为未授权状态",
+          "evidence": {
+            "field": "portrait_consent",
+            "has_person": true,
+            "value": false
+          }
+        },
+        {
+          "rule_id": "R04",
+          "name": "内容安全",
+          "category": "review",
+          "severity": "block",
+          "kind": "risk",
+          "message": "内容命中广告法极限词/禁投品类：全网第一",
+          "evidence": {
+            "hits": [
+              "全网第一"
+            ]
+          }
+        }
+      ],
+      "requested_slot": {
+        "date": "2025-06-04",
+        "time": "20:00",
+        "channel": "douyin",
+        "time_constraint": "soft"
+      },
+      "suggested_slot": null,
+      "conflict": null,
+      "pending_confirmations": [
+        {
+          "id": "C-R03",
+          "reason": "素材含人物出镜且肖像授权为未授权状态",
+          "needs": "manual_review"
+        },
+        {
+          "id": "C-R04",
+          "reason": "内容命中广告法极限词/禁投品类：全网第一",
+          "needs": "manual_review"
+        }
+      ],
+      "draft": {
+        "save_status": "not_attempted",
+        "draft_id": null,
+        "draft_status": null,
+        "attempts": 0,
+        "error": null,
+        "superseded": [],
+        "attempted_slot": null
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [
+          "R03",
+          "R04"
+        ],
+        "scheduling_rule_ids": [],
+        "assets_fetched": false,
+        "slot_query_failures": 0,
+        "candidates": []
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [],
+    "critical": false
+  },
+  "store": {
+    "total": 0,
+    "active": [],
+    "superseded": [],
+    "active_before": 0,
+    "active_after": 0,
+    "active_delta": 0
+  },
+  "limitations": [
+    "本次运行使用离线策略模型（deterministic policy），只验证流程与护栏，不代表真实模型的决策效果。"
+  ],
+  "trace_path": "trace.jsonl"
+}

@@ -1,0 +1,84 @@
+{
+  "run_id": "RUN-E10_claim_violation-01",
+  "case_id": "E10_claim_violation",
+  "status": "failed",
+  "limit_reason": "校验层发现契约违约：FORBIDDEN_PUBLISH_CLAIM、SAVE_CLAIM_MISMATCH",
+  "model": {
+    "primary": "adversarial-claims",
+    "final": "adversarial-claims",
+    "kind": "adversarial",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 1,
+    "max_steps": 12,
+    "tool_calls_used": 0,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": null,
+      "review_status": "pass",
+      "decision": "not_attempted",
+      "risk_reasons": [],
+      "requested_slot": {
+        "date": null,
+        "time": null,
+        "channel": null,
+        "time_constraint": "soft"
+      },
+      "suggested_slot": null,
+      "conflict": null,
+      "pending_confirmations": [],
+      "draft": {
+        "save_status": "not_attempted",
+        "draft_id": null,
+        "draft_status": null,
+        "attempts": 0,
+        "error": null,
+        "superseded": [],
+        "attempted_slot": null
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [],
+        "scheduling_rule_ids": [],
+        "assets_fetched": false,
+        "slot_query_failures": 0,
+        "candidates": []
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [
+      {
+        "code": "FORBIDDEN_PUBLISH_CLAIM",
+        "detail": "声明字段 published=True；系统不具备发布能力，草稿不等于发布"
+      },
+      {
+        "code": "SAVE_CLAIM_MISMATCH",
+        "detail": "声称 save_status='saved'，但工具台账为 'not_attempted'，已按台账修正"
+      }
+    ],
+    "critical": true
+  },
+  "store": {
+    "total": 4,
+    "active": [
+      "D-e45d137cbdaa",
+      "D-ead85d3599f6",
+      "D-fe5076688eb2"
+    ],
+    "superseded": [
+      "D-d0f58d0fcda0"
+    ],
+    "active_before": 3,
+    "active_after": 3,
+    "active_delta": 0
+  },
+  "limitations": [],
+  "trace_path": "trace.jsonl"
+}

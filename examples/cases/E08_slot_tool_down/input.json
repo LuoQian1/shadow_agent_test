@@ -1,0 +1,30 @@
+{
+  "case_id": "E08_slot_tool_down",
+  "title": "工具失败：时段查询连续超时，无法核实空闲时段",
+  "story": "M07 时长超频道上限（warn），更关键的是 query_slots 连续两次超时。Agent 在无法核实时段的情况下不得凭猜测保存草稿，必须明确报出「无法核实」并终止。",
+  "material_id": "M07",
+  "brief_id": "B-M07-v1",
+  "repeat": 1,
+  "faults": {
+    "query_slots": {
+      "fail_times": 2,
+      "error": "ETIMEDOUT: scheduling-service did not respond in 3000ms"
+    }
+  },
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "failed",
+    "review_status": "warn",
+    "decision": "tool_failure",
+    "suggested_time": null,
+    "save_status": "not_attempted",
+    "exit_code": 2,
+    "active_drafts": 0,
+    "published": false,
+    "overrides_min": 0,
+    "slot_query_attempts_min": 2
+  }
+}

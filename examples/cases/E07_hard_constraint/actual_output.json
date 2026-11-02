@@ -1,0 +1,106 @@
+{
+  "run_id": "RUN-E07_hard_constraint-01",
+  "case_id": "E07_hard_constraint",
+  "status": "completed",
+  "limit_reason": null,
+  "model": {
+    "primary": "offline-policy",
+    "final": "offline-policy",
+    "kind": "offline",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 6,
+    "max_steps": 12,
+    "tool_calls_used": 5,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M05",
+      "title": "新品预热 10s 卡点",
+      "review_status": "pass",
+      "decision": "conflict_blocked",
+      "risk_reasons": [
+        {
+          "rule_id": "R07",
+          "name": "时段占用与频道配额",
+          "category": "scheduling",
+          "severity": "warn",
+          "kind": "risk",
+          "message": "请求时段 18:00 已被 M09（confirmed）占用，需要换时段或请求确认",
+          "evidence": {
+            "requested_time": "18:00",
+            "occupant": "M09",
+            "occupant_status": "confirmed"
+          }
+        }
+      ],
+      "requested_slot": {
+        "date": "2025-06-07",
+        "time": "18:00",
+        "channel": "douyin",
+        "time_constraint": "hard"
+      },
+      "suggested_slot": null,
+      "conflict": {
+        "type": "slot_occupied",
+        "time": "18:00",
+        "occupant": "M09",
+        "occupant_status": "confirmed",
+        "occupant_source": "schedule",
+        "occupant_window": "18:00-18:30"
+      },
+      "pending_confirmations": [
+        {
+          "id": "C-HARD",
+          "reason": "请求时段 18:00 不可用（占用/禁发：M09），需用户决定是否改期或放宽硬性要求",
+          "needs": "user_decision"
+        }
+      ],
+      "draft": {
+        "save_status": "not_attempted",
+        "draft_id": null,
+        "draft_status": null,
+        "attempts": 0,
+        "error": null,
+        "superseded": [],
+        "attempted_slot": null
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [],
+        "scheduling_rule_ids": [
+          "R07"
+        ],
+        "assets_fetched": false,
+        "slot_query_failures": 0,
+        "candidates": [
+          "19:00",
+          "19:30",
+          "20:00",
+          "20:30",
+          "21:00"
+        ]
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [],
+    "critical": false
+  },
+  "store": {
+    "total": 0,
+    "active": [],
+    "superseded": [],
+    "active_before": 0,
+    "active_after": 0,
+    "active_delta": 0
+  },
+  "limitations": [
+    "本次运行使用离线策略模型（deterministic policy），只验证流程与护栏，不代表真实模型的决策效果。"
+  ],
+  "trace_path": "trace.jsonl"
+}

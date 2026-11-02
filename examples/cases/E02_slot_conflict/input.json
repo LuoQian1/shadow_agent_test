@@ -1,0 +1,26 @@
+{
+  "case_id": "E02_slot_conflict",
+  "title": "时段冲突：请求 18:00 已被占用，19:00 可用（题面参考用例）",
+  "story": "M01 无风险，用户要求 2025-06-01 18:00。该时段已被 M09 草稿占用，19:00 可用。Agent 应建议 19:00 并标记待确认，只能存草稿，不能称已发布。",
+  "material_id": "M01",
+  "brief_id": "B-M01-v1",
+  "repeat": 1,
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "completed",
+    "review_status": "pass",
+    "decision": "draft_saved_pending_confirmation",
+    "suggested_time": "19:00",
+    "save_status": "saved",
+    "exit_code": 0,
+    "pending_confirmations_min": 1,
+    "active_drafts": 1,
+    "published": false,
+    "overrides_min": 0,
+    "conflict_occupant": "M09"
+  }
+}

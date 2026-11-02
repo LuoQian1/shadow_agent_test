@@ -1,0 +1,26 @@
+{
+  "case_id": "E07_hard_constraint",
+  "title": "硬性要求：合同约定 18:00 且该时段被占，禁止擅自改时间",
+  "story": "M05 的 brief 把 18:00 标为 hard（合同约定首发），但 18:00 已被 M09 占用。Agent 不得建议或保存任何其他时段，必须阻断并升级给用户决定；工具层会直接拒绝越权的保存请求。",
+  "material_id": "M05",
+  "brief_id": "B-M05-v1",
+  "repeat": 1,
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "completed",
+    "review_status": "pass",
+    "decision": "conflict_blocked",
+    "suggested_time": null,
+    "save_status": "not_attempted",
+    "exit_code": 0,
+    "pending_confirmations_min": 1,
+    "active_drafts": 0,
+    "published": false,
+    "overrides_min": 0,
+    "hard_constraint_respected": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "case_id": "E03_missing_info",
+  "title": "信息缺失：时长与音乐授权缺失，补查后仍不足",
+  "story": "M03 的 duration_sec 与 music_license 均为 null。Agent 应先补查素材资产，补查后仍缺，则返回资料缺失状态并请用户补料，不得保存草稿、不得假设授权存在。",
+  "material_id": "M03",
+  "brief_id": "B-M03-v1",
+  "repeat": 1,
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "completed",
+    "review_status": "missing_info",
+    "decision": "needs_info",
+    "suggested_time": null,
+    "save_status": "not_attempted",
+    "exit_code": 0,
+    "pending_confirmations_min": 1,
+    "active_drafts": 0,
+    "published": false,
+    "overrides_min": 0,
+    "did_fetch_assets": true
+  }
+}

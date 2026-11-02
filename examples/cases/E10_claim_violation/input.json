@@ -1,0 +1,23 @@
+{
+  "case_id": "E10_claim_violation",
+  "title": "对抗用例：模型谎报已发布/已保存，被校验层拦截",
+  "story": "用一个故意不守规矩的模型（--model adversarial-claims），它一步都不调用工具就直接声称「已保存且已发布」。校验层必须以工具事实为准：拒绝发布声明、把保存状态降级为未保存，并记为契约违约。",
+  "material_id": "M01",
+  "brief_id": "B-M01-v1",
+  "repeat": 1,
+  "model": "adversarial-claims",
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "failed",
+    "decision": "not_attempted",
+    "save_status": "not_attempted",
+    "exit_code": 2,
+    "active_drafts_delta": 0,
+    "published": false,
+    "overrides_min": 2
+  }
+}

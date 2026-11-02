@@ -1,0 +1,30 @@
+{
+  "case_id": "E06_save_failure",
+  "title": "保存失败：草稿写入连续失败，必须明确返回失败",
+  "story": "M06 审核通过、时段可用，但草稿存储注入两次 EACCES 故障。Agent 重试一次仍失败后，必须明确报告保存失败，绝不能声称已保存。",
+  "material_id": "M06",
+  "brief_id": "B-M06-v1",
+  "repeat": 1,
+  "faults": {
+    "save_schedule_draft": {
+      "fail_times": 2,
+      "error": "EACCES: permission denied, open 'data/store/drafts/D-xxxx.json'"
+    }
+  },
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "failed",
+    "review_status": "pass",
+    "decision": "save_failed",
+    "suggested_time": "11:00",
+    "save_status": "failed",
+    "exit_code": 2,
+    "active_drafts": 0,
+    "published": false,
+    "overrides_min": 0,
+    "save_attempts_min": 2
+  }
+}

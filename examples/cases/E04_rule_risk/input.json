@@ -1,0 +1,29 @@
+{
+  "case_id": "E04_rule_risk",
+  "title": "规则风险：无肖像授权 + 广告法极限词",
+  "story": "M04 含真人出镜但 portrait_consent=false，标题命中极限词「全网第一」。属于硬性规则风险，Agent 必须阻断、不保存草稿，并列出风险原因与待法务确认项。",
+  "material_id": "M04",
+  "brief_id": "B-M04-v1",
+  "repeat": 1,
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "completed",
+    "review_status": "blocked",
+    "decision": "review_blocked",
+    "suggested_time": null,
+    "save_status": "not_attempted",
+    "exit_code": 0,
+    "pending_confirmations_min": 1,
+    "active_drafts": 0,
+    "published": false,
+    "overrides_min": 0,
+    "risk_rule_ids_contains": [
+      "R03",
+      "R04"
+    ]
+  }
+}

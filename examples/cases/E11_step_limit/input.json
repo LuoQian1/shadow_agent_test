@@ -1,0 +1,24 @@
+{
+  "case_id": "E11_step_limit",
+  "title": "步数上限：模型反复发起不同参数的查询，触达工具调用上限",
+  "story": "用一个不断换参数、永不收尾的模型（--model adversarial-loop），验证 MAX_TOOL_CALLS 生效后返回明确的未完成状态，而不是继续空转或被当成正常完成。",
+  "material_id": "M02",
+  "brief_id": "B-M02-v1",
+  "repeat": 1,
+  "model": "adversarial-loop",
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "incomplete_limit_reached",
+    "decision": "not_attempted",
+    "save_status": "not_attempted",
+    "exit_code": 3,
+    "active_drafts_delta": 0,
+    "published": false,
+    "overrides_min": 0,
+    "tool_calls_used": 8
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "run_id": "RUN-E03_missing_info-01",
+  "case_id": "E03_missing_info",
+  "status": "completed",
+  "limit_reason": null,
+  "model": {
+    "primary": "openai-compat",
+    "final": "openai-compat",
+    "kind": "real",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 5,
+    "max_steps": 12,
+    "tool_calls_used": 4,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M03",
+      "title": "周末探店预告",
+      "review_status": "missing_info",
+      "decision": "needs_info",
+      "risk_reasons": [
+        {
+          "rule_id": "R01",
+          "name": "素材元数据完整性",
+          "category": "review",
+          "severity": "block",
+          "kind": "missing",
+          "message": "素材元数据缺失：duration_sec，无法确认排期参数",
+          "evidence": {
+            "missing_fields": [
+              "duration_sec"
+            ]
+          }
+        },
+        {
+          "rule_id": "R02",
+          "name": "版权与品牌授权",
+          "category": "review",
+          "severity": "block",
+          "kind": "missing",
+          "message": "音乐版权信息缺失（字段为 null），需向上游补查",
+          "evidence": {
+            "field": "music_license"
+          }
+        }
+      ],
+      "requested_slot": {
+        "date": "2025-06-04",
+        "time": "19:00",
+        "channel": "douyin",
+        "time_constraint": "soft"
+      },
+      "suggested_slot": null,
+      "conflict": null,
+      "pending_confirmations": [
+        {
+          "id": "C-INFO",
+          "reason": "素材信息缺失：素材元数据缺失：duration_sec，无法确认排期参数；音乐版权信息缺失（字段为 null），需向上游补查",
+          "needs": "material_metadata"
+        },
+        {
+          "id": "C-R01",
+          "reason": "素材元数据缺失：duration_sec，无法确认排期参数",
+          "needs": "manual_review"
+        },
+        {
+          "id": "C-R02",
+          "reason": "音乐版权信息缺失（字段为 null），需向上游补查",
+          "needs": "manual_review"
+        }
+      ],
+      "draft": {
+        "save_status": "not_attempted",
+        "draft_id": null,
+        "draft_status": null,
+        "attempts": 0,
+        "error": null,
+        "superseded": [],
+        "attempted_slot": null
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [
+          "R01",
+          "R02"
+        ],
+        "scheduling_rule_ids": [],
+        "assets_fetched": true,
+        "slot_query_failures": 0,
+        "candidates": []
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [],
+    "critical": false
+  },
+  "store": {
+    "total": 0,
+    "active": [],
+    "superseded": [],
+    "active_before": 0,
+    "active_after": 0,
+    "active_delta": 0
+  },
+  "limitations": [
+    "补查素材服务后仍缺失：music_license、duration_sec（上游确实没有该信息，未做任何假设）"
+  ],
+  "trace_path": "trace.jsonl"
+}

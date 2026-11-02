@@ -1,0 +1,25 @@
+{
+  "case_id": "E01_normal",
+  "title": "正常排期：素材无风险，请求时段可用",
+  "story": "内容运营为 M02 提交 2025-06-01 10:00 的排期需求。素材授权齐全、时段空闲，Agent 应完成审核并直接把草稿落在请求时段。",
+  "material_id": "M02",
+  "brief_id": "B-M02-v1",
+  "repeat": 1,
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "completed",
+    "review_status": "pass",
+    "decision": "draft_saved",
+    "suggested_time": "10:00",
+    "save_status": "saved",
+    "exit_code": 0,
+    "pending_confirmations_min": 0,
+    "active_drafts": 1,
+    "published": false,
+    "overrides_min": 0
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "run_id": "RUN-E01_normal-01",
+  "case_id": "E01_normal",
+  "status": "completed",
+  "limit_reason": null,
+  "model": {
+    "primary": "offline-policy",
+    "final": "offline-policy",
+    "kind": "offline",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 7,
+    "max_steps": 12,
+    "tool_calls_used": 6,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M02",
+      "title": "通勤穿搭合集 patch",
+      "review_status": "pass",
+      "decision": "draft_saved",
+      "risk_reasons": [],
+      "requested_slot": {
+        "date": "2025-06-01",
+        "time": "10:00",
+        "channel": "douyin",
+        "time_constraint": "soft"
+      },
+      "suggested_slot": {
+        "date": "2025-06-01",
+        "time": "10:00",
+        "channel": "douyin"
+      },
+      "conflict": null,
+      "pending_confirmations": [],
+      "draft": {
+        "save_status": "saved",
+        "draft_id": "D-5b38db436515",
+        "draft_status": "draft",
+        "attempts": 1,
+        "error": null,
+        "superseded": [],
+        "attempted_slot": {
+          "date": "2025-06-01",
+          "time": "10:00",
+          "channel": "douyin"
+        }
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [],
+        "scheduling_rule_ids": [],
+        "assets_fetched": false,
+        "slot_query_failures": 0,
+        "candidates": [
+          "10:00",
+          "10:30",
+          "11:00",
+          "11:30",
+          "13:00"
+        ]
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [],
+    "critical": false
+  },
+  "store": {
+    "total": 1,
+    "active": [
+      "D-5b38db436515"
+    ],
+    "superseded": [],
+    "active_before": 0,
+    "active_after": 1,
+    "active_delta": 1
+  },
+  "limitations": [
+    "本次运行使用离线策略模型（deterministic policy），只验证流程与护栏，不代表真实模型的决策效果。"
+  ],
+  "trace_path": "trace.jsonl"
+}

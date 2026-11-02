@@ -1,0 +1,41 @@
+{
+  "case_id": "E09_resubmit_after_change",
+  "title": "更换占用时段并重复提交：旧草稿被 supersede，只留一份活跃草稿",
+  "story": "M01 在 2025-06-02 早先只能排到 20:30（已存在待确认草稿）。现在占用被挪到 19:00，18:00 空出，运营重新提交完全相同的请求。Agent 应改排 18:00，并把旧的 20:30 草稿标记为 superseded，活跃草稿仍只有一份。",
+  "material_id": "M01",
+  "brief_id": "B-M01-v2",
+  "repeat": 1,
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": [
+      {
+        "material_id": "M01",
+        "date": "2025-06-02",
+        "time": "20:30",
+        "channel": "douyin",
+        "duration_min": 1,
+        "brief_id": "B-M01-v2",
+        "status": "pending_confirmation",
+        "pending_confirmations": [
+          {
+            "id": "C-seed-1",
+            "reason": "早先方案：18:00/19:00 均被占用，只能排 20:30，与用户要求不一致"
+          }
+        ]
+      }
+    ]
+  },
+  "expect": {
+    "run_status": "completed",
+    "review_status": "pass",
+    "decision": "draft_saved",
+    "suggested_time": "18:00",
+    "save_status": "saved",
+    "exit_code": 0,
+    "active_drafts": 1,
+    "superseded_drafts": 1,
+    "published": false,
+    "overrides_min": 0
+  }
+}

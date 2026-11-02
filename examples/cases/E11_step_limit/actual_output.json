@@ -1,0 +1,84 @@
+{
+  "run_id": "RUN-E11_step_limit-01",
+  "case_id": "E11_step_limit",
+  "status": "incomplete_limit_reached",
+  "limit_reason": "达到最大工具调用次数 8",
+  "model": {
+    "primary": "adversarial-loop",
+    "final": "adversarial-loop",
+    "kind": "adversarial",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 9,
+    "max_steps": 12,
+    "tool_calls_used": 8,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M02",
+      "title": null,
+      "review_status": "pass",
+      "decision": "not_attempted",
+      "risk_reasons": [],
+      "requested_slot": {
+        "date": null,
+        "time": null,
+        "channel": null,
+        "time_constraint": "soft"
+      },
+      "suggested_slot": null,
+      "conflict": {
+        "type": "blackout",
+        "time": "12:30",
+        "reason": "午休免打扰时段，不排任何内容",
+        "occupant_window": "12:00-13:00"
+      },
+      "pending_confirmations": [],
+      "draft": {
+        "save_status": "not_attempted",
+        "draft_id": null,
+        "draft_status": null,
+        "attempts": 0,
+        "error": null,
+        "superseded": [],
+        "attempted_slot": null
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [],
+        "scheduling_rule_ids": [],
+        "assets_fetched": false,
+        "slot_query_failures": 0,
+        "candidates": [
+          "13:00",
+          "13:30",
+          "14:00",
+          "14:30",
+          "15:00"
+        ]
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [],
+    "critical": false
+  },
+  "store": {
+    "total": 1,
+    "active": [
+      "D-5b38db436515"
+    ],
+    "superseded": [],
+    "active_before": 1,
+    "active_after": 1,
+    "active_delta": 0
+  },
+  "limitations": [
+    "运行触达上限（达到最大工具调用次数 8），结论为「未完成」，不代表审核结论。"
+  ],
+  "trace_path": "trace.jsonl"
+}

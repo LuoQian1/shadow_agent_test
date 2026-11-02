@@ -1,0 +1,27 @@
+{
+  "case_id": "E05_duplicate_submit",
+  "title": "重复提交：同一请求连续提交两次，只允许一份草稿",
+  "story": "相同 brief（M01 / 2025-06-03 / 18:00）连续提交两次。第一次生成草稿，第二次必须返回 duplicate 并复用同一 draft_id，草稿库里只能有一份草稿。",
+  "material_id": "M01",
+  "brief_id": "B-M01-v3",
+  "repeat": 2,
+  "faults": {},
+  "schedule_overlay": [],
+  "setup": {
+    "seed_drafts": []
+  },
+  "expect": {
+    "run_status": "completed",
+    "review_status": "pass",
+    "decision": "draft_exists",
+    "suggested_time": "19:00",
+    "save_status": "duplicate",
+    "exit_code": 0,
+    "pending_confirmations_min": 1,
+    "active_drafts": 1,
+    "published": false,
+    "overrides_min": 0,
+    "first_run_save_status": "saved",
+    "same_draft_id": true
+  }
+}

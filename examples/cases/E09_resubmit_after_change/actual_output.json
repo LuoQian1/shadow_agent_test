@@ -1,0 +1,93 @@
+{
+  "run_id": "RUN-E09_resubmit_after_change-01",
+  "case_id": "E09_resubmit_after_change",
+  "status": "completed",
+  "limit_reason": null,
+  "model": {
+    "primary": "offline-policy",
+    "final": "offline-policy",
+    "kind": "offline",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 7,
+    "max_steps": 12,
+    "tool_calls_used": 6,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M01",
+      "title": "夏日新品开箱 15s 竖版",
+      "review_status": "pass",
+      "decision": "draft_saved",
+      "risk_reasons": [],
+      "requested_slot": {
+        "date": "2025-06-02",
+        "time": "18:00",
+        "channel": "douyin",
+        "time_constraint": "soft"
+      },
+      "suggested_slot": {
+        "date": "2025-06-02",
+        "time": "18:00",
+        "channel": "douyin"
+      },
+      "conflict": null,
+      "pending_confirmations": [],
+      "draft": {
+        "save_status": "saved",
+        "draft_id": "D-fe5076688eb2",
+        "draft_status": "draft",
+        "attempts": 1,
+        "error": null,
+        "superseded": [
+          "D-d0f58d0fcda0"
+        ],
+        "attempted_slot": {
+          "date": "2025-06-02",
+          "time": "18:00",
+          "channel": "douyin"
+        }
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [],
+        "scheduling_rule_ids": [],
+        "assets_fetched": false,
+        "slot_query_failures": 0,
+        "candidates": [
+          "18:00",
+          "20:00",
+          "20:30",
+          "21:00",
+          "21:30"
+        ]
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [],
+    "critical": false
+  },
+  "store": {
+    "total": 4,
+    "active": [
+      "D-e45d137cbdaa",
+      "D-ead85d3599f6",
+      "D-fe5076688eb2"
+    ],
+    "superseded": [
+      "D-d0f58d0fcda0"
+    ],
+    "active_before": 3,
+    "active_after": 3,
+    "active_delta": 0
+  },
+  "limitations": [
+    "本次运行使用离线策略模型（deterministic policy），只验证流程与护栏，不代表真实模型的决策效果。"
+  ],
+  "trace_path": "trace.jsonl"
+}

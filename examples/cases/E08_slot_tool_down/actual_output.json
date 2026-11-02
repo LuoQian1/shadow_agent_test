@@ -1,0 +1,87 @@
+{
+  "run_id": "RUN-E08_slot_tool_down-01",
+  "case_id": "E08_slot_tool_down",
+  "status": "failed",
+  "limit_reason": "时段查询失败 2 次，无法核实空闲时段，任务未完成",
+  "model": {
+    "primary": "offline-policy",
+    "final": "offline-policy",
+    "kind": "offline",
+    "degraded": false
+  },
+  "limits": {
+    "steps_used": 7,
+    "max_steps": 12,
+    "tool_calls_used": 6,
+    "max_tool_calls": 8,
+    "max_repeat": 2
+  },
+  "no_publish_capability": true,
+  "materials": [
+    {
+      "material_id": "M07",
+      "title": "长版产品测评",
+      "review_status": "warn",
+      "decision": "tool_failure",
+      "risk_reasons": [
+        {
+          "rule_id": "R05",
+          "name": "时长与规格",
+          "category": "review",
+          "severity": "warn",
+          "kind": "risk",
+          "message": "时长 120s 超过 douyin 频道上限 60s，需裁剪或改投频道",
+          "evidence": {
+            "duration_sec": 120,
+            "max_duration_sec": 60
+          }
+        }
+      ],
+      "requested_slot": {
+        "date": "2025-06-08",
+        "time": "15:00",
+        "channel": "douyin",
+        "time_constraint": "soft"
+      },
+      "suggested_slot": null,
+      "conflict": null,
+      "pending_confirmations": [],
+      "draft": {
+        "save_status": "not_attempted",
+        "draft_id": null,
+        "draft_status": null,
+        "attempts": 0,
+        "error": null,
+        "superseded": [],
+        "attempted_slot": null
+      },
+      "published": false,
+      "evidence": {
+        "rules_checked": [
+          "R05"
+        ],
+        "scheduling_rule_ids": [],
+        "assets_fetched": false,
+        "slot_query_failures": 2,
+        "candidates": []
+      }
+    }
+  ],
+  "verifier": {
+    "overrides": [],
+    "critical": false
+  },
+  "store": {
+    "total": 0,
+    "active": [],
+    "superseded": [],
+    "active_before": 0,
+    "active_after": 0,
+    "active_delta": 0
+  },
+  "limitations": [
+    "本次运行使用离线策略模型（deterministic policy），只验证流程与护栏，不代表真实模型的决策效果。",
+    "时段查询连续失败 2 次，未核实目标时段是否空闲，因此没有保存草稿。"
+  ],
+  "trace_path": "trace.jsonl"
+}
