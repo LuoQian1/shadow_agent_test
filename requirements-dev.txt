@@ -1,0 +1,4 @@
+# 可选：测试也可以用标准库 unittest 运行，无需安装任何东西：
+#   python -m unittest discover -s tests -v
+# 若偏好 pytest（可直接发现 unittest 用例）：
+pytest>=7.0

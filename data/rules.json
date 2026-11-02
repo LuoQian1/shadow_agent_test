@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "grid_minutes": 30,
+  "day_window": {
+    "open": "09:00",
+    "close": "22:00"
+  },
+  "channel_limits": {
+    "douyin": {
+      "max_duration_sec": 60,
+      "max_per_day": 6,
+      "min_gap_min": 30
+    }
+  },
+  "rules": [
+    {
+      "id": "R01",
+      "name": "素材元数据完整性",
+      "category": "review",
+      "severity": "block",
+      "enabled": true,
+      "description": "标题/负责人/频道/时长任一缺失时无法安全排期，视为资料缺失",
+      "params": {
+        "required_fields": [
+          "title",
+          "owner",
+          "channel",
+          "duration_sec"
+        ]
+      }
+    },
+    {
+      "id": "R02",
+      "name": "版权与品牌授权",
+      "category": "review",
+      "severity": "block",
+      "enabled": true,
+      "description": "音乐/品牌授权字段为 null 视为资料缺失；明确为 false 视为无授权，直接阻断",
+      "params": {}
+    },
+    {
+      "id": "R03",
+      "name": "肖像授权",
+      "category": "review",
+      "severity": "block",
+      "enabled": true,
+      "description": "含人物出镜的素材必须提供肖像授权",
+      "params": {}
+    },
+    {
+      "id": "R04",
+      "name": "内容安全",
+      "category": "review",
+      "severity": "block",
+      "enabled": true,
+      "description": "标题或描述命中广告法极限词/禁投品类，直接阻断",
+      "params": {}
+    },
+    {
+      "id": "R05",
+      "name": "时长与规格",
+      "category": "review",
+      "severity": "warn",
+      "enabled": true,
+      "description": "超过频道时长上限需裁剪或改投其他频道",
+      "params": {}
+    },
+    {
+      "id": "R06",
+      "name": "投放截止时间",
+      "category": "review",
+      "severity": "block",
+      "enabled": true,
+      "description": "建议发布时间晚于素材投放截止时间",
+      "params": {}
+    },
+    {
+      "id": "R07",
+      "name": "时段占用与频道配额",
+      "category": "scheduling",
+      "severity": "warn",
+      "enabled": true,
+      "description": "请求时段被占用、与已有排期过近、超出当日配额或与竞品同日同频道，属于排期冲突而非素材风险",
+      "params": {}
+    },
+    {
+      "id": "R08",
+      "name": "重复内容",
+      "category": "review",
+      "severity": "confirm",
+      "enabled": true,
+      "description": "相同 content_hash 已存在排期或草稿，需人工确认是否重复投放",
+      "params": {}
+    },
+    {
+      "id": "R09",
+      "name": "禁发时段",
+      "category": "scheduling",
+      "severity": "warn",
+      "enabled": true,
+      "description": "请求时段落在禁发窗口内（如午休免打扰）",
+      "params": {}
+    },
+    {
+      "id": "R10",
+      "name": "素材审核状态",
+      "category": "review",
+      "severity": "block",
+      "enabled": true,
+      "description": "素材未通过审核不可排期",
+      "params": {
+        "allowed": [
+          "approved"
+        ]
+      }
+    }
+  ]
+}

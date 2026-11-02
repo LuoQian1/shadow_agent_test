@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "terms": [
+    "全网第一",
+    "国家级",
+    "包治",
+    "永久有效",
+    "最便宜"
+  ],
+  "blocked_categories": [
+    "医疗",
+    "药品",
+    "金融理财"
+  ],
+  "blackout_windows": [
+    {
+      "channel": "douyin",
+      "date": "*",
+      "start": "12:00",
+      "end": "13:00",
+      "reason": "午休免打扰时段，不排任何内容"
+    }
+  ]
+}

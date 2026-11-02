@@ -1,0 +1,122 @@
+[
+  {
+    "brief_id": "B-M01-v1",
+    "material_id": "M01",
+    "requested_date": "2025-06-01",
+    "requested_time": "18:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "希望晚高峰首发，如冲突可挪时段但需确认",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M02-v1",
+    "material_id": "M02",
+    "requested_date": "2025-06-01",
+    "requested_time": "10:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "上午时段即可",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M03-v1",
+    "material_id": "M03",
+    "requested_date": "2025-06-04",
+    "requested_time": "19:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "素材刚回传，尽快排一版",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M04-v1",
+    "material_id": "M04",
+    "requested_date": "2025-06-04",
+    "requested_time": "20:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "配合达人档期",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M05-v1",
+    "material_id": "M05",
+    "requested_date": "2025-06-07",
+    "requested_time": "18:00",
+    "time_constraint": "hard",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "合同约定 18:00 首发，不得改动",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M06-v1",
+    "material_id": "M06",
+    "requested_date": "2025-06-06",
+    "requested_time": "11:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "普通排期",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M07-v1",
+    "material_id": "M07",
+    "requested_date": "2025-06-08",
+    "requested_time": "15:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "时长偏长，如有问题请提示",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M08-v1",
+    "material_id": "M08",
+    "requested_date": "2025-06-09",
+    "requested_time": "16:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "供应商催排",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M01-v2",
+    "material_id": "M01",
+    "requested_date": "2025-06-02",
+    "requested_time": "18:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "占用时段被挪动后重新提交，仍要 18:00",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  },
+  {
+    "brief_id": "B-M01-v3",
+    "material_id": "M01",
+    "requested_date": "2025-06-03",
+    "requested_time": "18:00",
+    "time_constraint": "soft",
+    "channel": "douyin",
+    "deadline": "2025-06-30T23:59",
+    "notes": "重复提交场景",
+    "submitted_by": "ops.zhang",
+    "brief_version": 1
+  }
+]

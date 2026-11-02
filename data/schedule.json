@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2025-06-01",
+    "time": "18:00",
+    "channel": "douyin",
+    "duration_min": 30,
+    "material_id": "M09",
+    "status": "draft",
+    "content_hash": "sha256:h09",
+    "note": "已被 M09 的草稿占用"
+  },
+  {
+    "date": "2025-06-02",
+    "time": "19:00",
+    "channel": "douyin",
+    "duration_min": 30,
+    "material_id": "M09",
+    "status": "confirmed",
+    "content_hash": "sha256:h09",
+    "note": "占用挪到 19:00，18:00 空出"
+  },
+  {
+    "date": "2025-06-03",
+    "time": "18:00",
+    "channel": "douyin",
+    "duration_min": 30,
+    "material_id": "M09",
+    "status": "draft",
+    "content_hash": "sha256:h09",
+    "note": "重复提交场景的占用"
+  },
+  {
+    "date": "2025-06-05",
+    "time": "21:00",
+    "channel": "douyin",
+    "duration_min": 30,
+    "material_id": "M10",
+    "status": "draft",
+    "content_hash": "sha256:h10",
+    "note": "竞品同日同频道排期"
+  },
+  {
+    "date": "2025-06-07",
+    "time": "18:00",
+    "channel": "douyin",
+    "duration_min": 30,
+    "material_id": "M09",
+    "status": "confirmed",
+    "content_hash": "sha256:h09",
+    "note": "硬性要求时段已被占用"
+  }
+]
